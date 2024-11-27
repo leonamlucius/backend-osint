@@ -49,7 +49,7 @@ def get_all_vazamentos(db: Session, skip: int = 0, limit: int = 100):
   return db.query(models.Vazamento).offset(skip).limit(limit).all()
 
 
-def create_vazamento(db: Session, vazamento: schemas.VazamentoRequest):
+def create_vazamento( vazamento: schemas.VazamentoRequest, db: Session):
 
   db_vazamento = models.Vazamento(
     email= vazamento.email
