@@ -45,3 +45,5 @@ def criar_vazamentos(vazamentos: schemas.VazamentoRequest, db: Session= Depends(
 
 
 
+
+

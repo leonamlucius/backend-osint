@@ -44,10 +44,7 @@ def get_vazamento_by_email(email: str, db: Session):
 
 
 def get_all_vazamentos(db: Session, skip: int = 0, limit: int = 100):
-  if limit == 0: # verefica se o parametro e igual a 0
-    return db.query(models.Vazamento).offset(skip).all()   # retorna a query sem limit
-  else:
-    return db.query(models.Vazamento).offset(skip).limit(limit).all() # a query tem limit
+  return db.query(models.Vazamento).offset(skip).limit(limit).all()
 
 
 def create_vazamento(vazamento: schemas.VazamentoRequest, db: Session):
