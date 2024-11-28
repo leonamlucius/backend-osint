@@ -1,7 +1,5 @@
-from app.models import models, schemas
+from app.models.vazamentos import models, schemas
 from sqlalchemy.orm import Session
-
-from app.models.schemas import VazamentoRequest
 
 
 def obter_vazamentos_por_email(email: str) -> str:
@@ -35,14 +33,14 @@ emails = {
 
 
 
-def get_vazamento(db: Session, id: int):
-  return db.query(models.Vazamento).filter(models.Vazamento.id == id).first()
+def get_vazamento(db: Session, vazamentoId: int):
+  return db.query(models.Vazamento).filter(vazamentoId == models.Vazamento.id).first()
 
 
 
 
 def get_vazamento_by_email(email: str, db: Session):
-  return db.query(models.Vazamento).filter(models.Vazamento.email == email).first()
+  return db.query(models.Vazamento).filter(email == models.Vazamento.email).first()
 
 
 def get_all_vazamentos(db: Session, skip: int = 0, limit: int = 100):
@@ -52,7 +50,7 @@ def get_all_vazamentos(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Vazamento).offset(skip).limit(limit).all() # a query tem limit
 
 
-def create_vazamento( vazamento: schemas.VazamentoRequest, db: Session):
+def create_vazamento(vazamento: schemas.VazamentoRequest, db: Session):
 
   db_vazamento = models.Vazamento(
     email= vazamento.email

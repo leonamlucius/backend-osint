@@ -1,9 +1,6 @@
-from http.client import responses
-
 from fastapi import APIRouter, HTTPException, Depends
 from app.service import VazamentoService
-from app.models import models
-from app.models import schemas
+from app.models.vazamentos import models, schemas
 from app.db.database import SessionLocal, engine
 from sqlalchemy.orm import Session
 
@@ -27,7 +24,7 @@ def getHello():
 
 
 
-@router.get(endpointVazamento + "procurar/{email}", response_model= schemas.VazamentoReponse )
+@router.get(endpointVazamento + "procurar/{email}", response_model= schemas.VazamentoReponse)
 def obter_vazamentos_por_email(email: str, db: Session= Depends(get_db)):
 
     vazamentoEncontrado = VazamentoService.get_vazamento_by_email(email, db)
@@ -40,7 +37,7 @@ def obter_vazamentos_por_email(email: str, db: Session= Depends(get_db)):
 
 
 @router.post(endpointVazamento, response_model = schemas.VazamentoReponse)
-def criar_vazamentos(vazamentos: schemas.VazamentoRequest,  db: Session= Depends(get_db)):
+def criar_vazamentos(vazamentos: schemas.VazamentoRequest, db: Session= Depends(get_db)):
 
     vazamento= VazamentoService.create_vazamento(vazamentos, db)
 
