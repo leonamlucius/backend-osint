@@ -27,7 +27,19 @@ async def obter_vazamentos_pelo_email_usuario(db: Session, email: str) -> list[s
         response = await httpx.AsyncClient().get("https://api.externa.com/vazamentos", params={"email": email})
         response.raise_for_status()
 
-        resultados_api = response.json()
+        resultados_api = [
+  {
+    "nome": "Youtube",
+    "titulo": "Vazou dados seus no Youtube",
+    "dominio_url": "youtube.com",
+    "data_vazamento": "2024-11-29T16:49:04.887Z",
+    "data_atualizacao": "2024-11-29T16:49:04.887Z",
+    "descricao": "descricao-teste",
+    "image_uri": "uri-teste",
+    "usuario_id": 2
+  }
+]
+
         for vazamento_data in resultados_api:
             criar_vazamento_no_banco_de_dados(db, vazamento_data, usuario.id)
 
