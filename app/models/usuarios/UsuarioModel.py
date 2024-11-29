@@ -8,5 +8,4 @@ class Usuario(Base):
     nome = Column(String, index=True, nullable=False)
     email = Column(String, index=True, nullable=False, unique=True)
     senha = Column(String, index=True, nullable=False)
-
     vazamentos = relationship("Vazamento", back_populates="usuario")  # Nome do atributo é "usuario" em Vazamento
