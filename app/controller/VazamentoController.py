@@ -19,34 +19,14 @@ def get_db():
         db.close()
 
 
-@router.get(endpointVazamento)
-def getHello():
-    return "Hello, word"
-
-
-
-@router.get(endpointVazamento + "procurar/{email}", response_model= schemas.VazamentoReponse)
-def obter_vazamentos_por_email(email: str, db: Session= Depends(get_db)):
-
-    vazamentoEncontrado = VazamentoService.get_vazamento_by_email(email, db)
-
-    if vazamentoEncontrado is None:
-        raise HTTPException(status_code = 404, detail= "Vazamentos não encontrados")
-
-
+@router.get(endpointVazamento + "procurar/{email}", response_model=List[schemas.VazamentoResponse])
+async def obter_vazamentos_do_usuario_por_email(email: str, db: Session = Depends(get_db)):
+    vazamentoEncontrado = await VazamentoService.obter_vazamentos_pelo_email_usuario(db, email)
     return vazamentoEncontrado
 
 
-@router.post(endpointVazamento, response_model = schemas.VazamentoReponse)
-def criar_vazamentos(vazamentos: schemas.VazamentoRequest, db: Session= Depends(get_db)):
 
-    vazamento= VazamentoService.create_vazamento(vazamentos, db)
-
-
-    return  vazamento
-
-
-@router.get(endpointVazamento + "exporvazamentos/", response_model=List[schemas.VazamentoReponse])
+@router.get(endpointVazamento + "exporvazamentos/", response_model=List[schemas.VazamentoResponse])
 def expor_vazamentos(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     """
     Endpoint para buscar todos os vazamentos de e-mails, com paginação.
