@@ -1,40 +1,38 @@
+import bcrypt
+from fastapi import HTTPException
+
 from app.models.usuarios import UsuarioSchemas, UsuarioModel
 from sqlalchemy.orm import Session
 
 
-def obter_vazamentos_por_email(email: str) -> str:
-
-    if not is_valid(email):
-        return "O email não pode ser nulo ou vazio."
-
-    return  procurar_email(email)
 
 
-def is_valid(string: str) -> bool:
-    return bool(string)  # Retorna True se não for nulo ou vazio
+def obter_usuario_pelo_id(db: Session, usuario_id: int):
+    usuario = db.query(UsuarioModel.Usuario).filter(usuario_id == UsuarioModel.Usuario.id).first()
+    if not usuario:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return usuario
 
+def obter_usuario_pelo_email(db: Session, user_email: str):
+    usuario = db.query(UsuarioModel.Usuario).filter(user_email == UsuarioModel.Usuario.email).first()
+    if not usuario:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return usuario
 
-def procurar_email(usuarioemail : str):
+def criar_usuario(db: Session, usuario: UsuarioSchemas.CreateUserRequest):
 
-   if usuarioemail in emails:
+    usuario_existente = db.query(UsuarioModel.Usuario).filter(usuario.email == UsuarioModel.Usuario.email).first()
+    if usuario_existente:
+        raise ValueError("Já existe um usuário com esse e-mail.")
 
-       return "EMAIL ENCONTRADO "+ emails[usuarioemail]
+    senha_criptografada = bcrypt.hashpw(usuario.senha.encode('utf8'), bcrypt.gensalt())
 
-   return "Não usuário com esse email"
-
-emails = {
-    "joao.silva@example.com": "João Silva",
-    "maria.oliveira@example.com": "Maria Oliveira",
-    "pedro.santos@example.com": "Pedro Santos",
-    "ana.lima@example.com": "Ana Lima",
-    "carla.souza@example.com": "Carla Souza"
-}
-
-
-
-
-def get_usuarios(db: Session, usuarioId: int):
-  return db.query(UsuarioModel.Usuario).filter(usuarioId == UsuarioModel.Usuario.id).first()
-
-
-
+    db_usuario = UsuarioModel.Usuario(
+        nome=usuario.nome,
+        email=usuario.email,
+        senha=senha_criptografada.decode('utf-8')
+    )
+    db.add(db_usuario)
+    db.commit()
+    db.refresh(db_usuario)
+    return db_usuario
