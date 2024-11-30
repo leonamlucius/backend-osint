@@ -1,13 +1,13 @@
 from pydantic import BaseModel
-from datetime import datetime
+from datetime import datetime, date
 from typing import Optional
 
 class VazamentoBase(BaseModel):
     nome: str
     titulo: str
     dominio_url: str
-    data_vazamento: datetime
-    data_atualizacao: datetime
+    data_vazamento: Optional[date]
+    data_atualizacao: Optional[datetime]
     descricao: Optional[str] = None
     image_uri: Optional[str] = None
 
@@ -15,8 +15,8 @@ class VazamentoCreate(BaseModel):
     nome: str
     titulo: str
     dominio_url: str
-    data_vazamento: datetime
-    data_atualizacao: datetime
+    data_vazamento: Optional[date]
+    data_atualizacao: Optional[datetime]
     descricao: Optional[str] = None
     image_uri: Optional[str] = None
     usuario_id: int
@@ -27,8 +27,8 @@ class VazamentoResponse(BaseModel):
     nome: str
     titulo: str
     dominio_url: str
-    data_vazamento: datetime
-    data_atualizacao: datetime
+    data_vazamento: Optional[date]
+    data_atualizacao: Optional[datetime]
     descricao: Optional[str] = None
     image_uri: Optional[str] = None
     usuario_id: int

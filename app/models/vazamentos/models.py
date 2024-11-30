@@ -9,11 +9,11 @@ class Vazamento(Base):
     nome = Column(String, index=True)
     titulo = Column(String, index=True)
     dominio_url = Column(String, index=True)
-    data_vazamento = Column(DateTime, nullable=False, default=datetime.utcnow)
-    data_atualizacao = Column(Date, nullable=False)
+    data_vazamento = Column(Date, nullable=True, default=datetime.utcnow)
+    data_atualizacao = Column(DateTime, nullable=True)
     descricao = Column(String, index=True)
     image_uri = Column(String, index=True)
-    usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False)  # Nome da tabela é "usuarios"
+    usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False)
 
     usuario = relationship("Usuario", back_populates="vazamentos")
 
