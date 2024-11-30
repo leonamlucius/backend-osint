@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends
-from app.service import VazamentoService
+from app.services import VazamentoService
 from app.models.vazamentos import models, schemas
 from app.db.database import SessionLocal, engine
 from sqlalchemy.orm import Session

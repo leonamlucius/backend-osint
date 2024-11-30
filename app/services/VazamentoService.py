@@ -7,7 +7,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from app.models.vazamentos import models, schemas
 from sqlalchemy.orm import Session
-from app.service import UsuarioService
+from app.services import UsuarioService
 
 load_dotenv()
 HIBP_API_KEY = os.getenv("HIBP_API_KEY")

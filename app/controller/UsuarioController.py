@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends, status
-from app.service import UsuarioService
+from app.services import UsuarioService
 from app.models.usuarios import UsuarioModel, UsuarioSchemas
 from app.db.database import SessionLocal, engine
 from sqlalchemy.orm import Session
