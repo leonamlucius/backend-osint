@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.ERROR, filename='error.log',
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SMTP_USERNAME = "felix.rodrigoing65@gmail.com"
-SMTP_PASSWORD = "unwx kffu jrtf fnys"
+SMTP_PASSWORD = ""
 
 
 async def enviar_email(destinatario: str, assunto: str, mensagem: str):
