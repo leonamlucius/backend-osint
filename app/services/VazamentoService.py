@@ -32,7 +32,7 @@ HEADERS = {
 API_URL_TEMPLATE = "https://haveibeenpwned.com/api/v3/breachedaccount/{email}?truncateResponse=false"
 
 
-async def obter_vazamentos_pelo_email_usuario(db: Session, email: str) -> list[schemas.VazamentoResponse]:
+async def obter_vazamentos_pelo_email_usuario_e_salva_no_db(db: Session, email: str) -> list[schemas.VazamentoResponse]:
     """
     Obtém vazamentos de segurança associados a um e-mail.
     Busca localmente no banco ou externamente na API Have I Been Pwned.

@@ -23,7 +23,7 @@ def get_db():
 
 @router.get(endpointVazamento + "procurar/{email}", response_model=List[schemas.VazamentoResponse])
 async def obter_vazamentos_do_usuario_por_email(email: str, db: Session = Depends(get_db)):
-    vazamentoEncontrado = await VazamentoService.obter_vazamentos_pelo_email_usuario(db, email)
+    vazamentoEncontrado = await VazamentoService.obter_vazamentos_pelo_email_usuario_e_salva_no_db(db, email)
     return vazamentoEncontrado
 
 
