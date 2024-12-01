@@ -38,7 +38,7 @@ class VazamentoResponse(BaseModel):
     usuario_id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class NotificacaoRequest(BaseModel):
@@ -46,3 +46,4 @@ class NotificacaoRequest(BaseModel):
     titulo_vazamento: str
     data: str
     descricao: str
+    image_uri: str

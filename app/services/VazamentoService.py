@@ -158,16 +158,150 @@ def get_all_vazamentos(db: Session, skip: int = 0, limit: int = 100):
     return vazamentos
 
 
-async def notificar_vazamento_usuario_por_email_demonstrativo(email_usuario: str, titulo_vazamento: str, data: str, descricao: str):
-    mensagem = (
-        f"Olá,\n\n"
-        f"Um novo vazamento foi identificado relacionado ao seu e-mail:\n\n"
-        f"**Título:** {titulo_vazamento}\n"
-        f"**Data:** {data}\n"
-        f"**Descrição:** {descricao}\n\n"
-        f"Recomendamos que altere suas senhas imediatamente e esteja atento a possíveis fraudes.\n\n"
-        f"Atenciosamente,\n"
-        f"Equipe de Segurança Start Cyber 2"
-    )
+async def notificar_vazamento_usuario_por_email_demonstrativo(email_usuario: str, titulo_vazamento: str, data: str, descricao: str, image_uri: str):
+    mensagem_html = f"""
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notificação de Vazamento</title>
+        <style>
+            body {{
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 0;
+            }}
+            .container {{
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }}
+            .header {{
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px;
+                border-radius: 8px 8px 0 0;
+                text-align: center;
+            }}
+            .content {{
+                margin: 20px 0;
+                font-size: 16px;
+                line-height: 1.6;
+            }}
+            .content a {{
+                color: #4CAF50;
+                text-decoration: none;
+            }}
+            .image-container {{
+                text-align: center;
+                margin: 20px 0;
+            }}
+            .image-container img {{
+                width: 80%;
+                max-width: 500px;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }}
+            .footer {{
+                text-align: center;
+                font-size: 14px;
+                color: #888888;
+                margin-top: 30px;
+            }}
+            .button {{
+                display: inline-block;
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                text-align: center;
+            }}
+            .button:hover {{
+                background-color: #45a049;
+            }}
+            .note {{
+                font-size: 14px;
+                color: #888888;
+                margin-top: 10px;
+            }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Alerta de Vazamento de Dados</h2>
+            </div>
+            <div class="content">
+                <p>Olá Corno,</p>
+                <p>Um novo vazamento foi identificado relacionado ao seu e-mail:</p>
+                <p><strong>Título:</strong> {titulo_vazamento}</p>
+                <p><strong>Data:</strong> {data}</p>
+                <p><strong>Descrição:</strong> {descricao}</p>
+                
+                <!-- Exibe a imagem do vazamento -->
+                <div class="image-container">
+                    <img src="{image_uri}" alt="Imagem do Vazamento">
+                </div>
+
+                <p>Recomendamos que altere suas senhas imediatamente e esteja atento a possíveis fraudes.</p>
+                <a href="#" class="button">Alterar Senha</a>
+            </div>
+            <div class="footer">
+                <p>Atenciosamente,</p>
+                <p><strong>Equipe de Segurança Start Cyber 2</strong></p>
+                <p class="note">Se você não reconhece esse e-mail, por favor, ignore ou entre em contato conosco.</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
+
     assunto = f"Novo vazamento detectado: {titulo_vazamento}"
-    await enviar_email(email_usuario, assunto, mensagem)
+    await enviar_email(email_usuario, assunto, mensagem_html)
+
+
+async def obter_vazamentos_pelo_email_usuario_e_salva_no_db_sem_verificacao_local(db: Session, email: str) -> list[schemas.VazamentoResponse]:
+    """
+    Obtém vazamentos de segurança associados a um e-mail, consultando a API,
+    e só salva no banco de dados aqueles que são novos (não estão no banco),
+    verificando os vazamentos pela combinação de 'Name' e 'BreachDate'. Retorna apenas
+    vazamentos novos
+    """
+
+    usuario = UsuarioService.obter_usuario_pelo_email(db, email)
+
+    resultados_api = await buscar_vazamentos_na_api(usuario.email)
+    novos_vazamentos = []
+
+    if resultados_api:
+        for vazamento_data in resultados_api:
+
+            vazamento_existente = buscar_vazamento_por_nome_e_data(db, vazamento_data['Name'], vazamento_data['BreachDate'], usuario.id)
+
+            if not vazamento_existente:
+                vazamento_salvo = criar_vazamento_no_banco_de_dados(db, processar_vazamento(vazamento_data), usuario.id)
+                novos_vazamentos.append(vazamento_salvo)
+
+    return novos_vazamentos
+
+
+def buscar_vazamento_por_nome_e_data(db: Session, name: str, breach_date: str, usuario_id: int) -> schemas.VazamentoResponse:
+    """
+    Busca no banco de dados por um vazamento específico com o 'Name' e 'BreachDate' fornecidos e o id do usuário.
+    Retorna o vazamento se encontrado, ou None se não existir.
+    """
+    return db.query(models.Vazamento).filter(
+        models.Vazamento.nome == name,
+        models.Vazamento.data_vazamento == breach_date,
+        models.Vazamento.id == usuario_id
+    ).first()
+

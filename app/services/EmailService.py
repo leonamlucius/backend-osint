@@ -1,24 +1,29 @@
 import aiosmtplib
 import logging
 from email.message import EmailMessage
+from dotenv import load_dotenv
+import os
 
+from fastapi import HTTPException
 
-logging.basicConfig(level=logging.ERROR, filename='error.log',
+load_dotenv()
+logging.basicConfig(level=logging.ERROR, filename='errorLogEmail.log',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SMTP_USERNAME = "felix.rodrigoing65@gmail.com"
-SMTP_PASSWORD = ""
 
+SMTP_USERNAME = os.getenv("SMTP_USERNAME")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
-async def enviar_email(destinatario: str, assunto: str, mensagem: str):
+async def enviar_email(destinatario: str, assunto: str, mensagem_html: str):
     email = EmailMessage()
     email["From"] = SMTP_USERNAME
     email["To"] = destinatario
     email["Subject"] = assunto
-    email.set_content(mensagem)
 
+    # Define o conteúdo do e-mail como HTML
+    email.set_content(mensagem_html, subtype="html")
 
     try:
         await aiosmtplib.send(
@@ -31,6 +36,4 @@ async def enviar_email(destinatario: str, assunto: str, mensagem: str):
         )
     except Exception as e:
         logging.error(f"Erro ao enviar e-mail: {e}")
-
-
-
+        raise HTTPException(status_code=500, detail=f"Erro ao enviar e-mail: {str(e)}")

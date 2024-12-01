@@ -51,11 +51,12 @@ async def notificar_vazamento_demonstrativo(notificacao: schemas.NotificacaoRequ
             email_usuario=notificacao.email_usuario,
             titulo_vazamento=notificacao.titulo_vazamento,
             data=notificacao.data,
-            descricao=notificacao.descricao
+            descricao=notificacao.descricao,
+            image_uri=notificacao.image_uri
         )
         return {"message": "E-mail enviado com sucesso!"}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Erro ao enviar e-mail: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Erro ao enviar e-mail")
 
 
 
