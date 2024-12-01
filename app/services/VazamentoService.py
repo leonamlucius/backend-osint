@@ -16,20 +16,19 @@ HIBP_API_KEY = os.getenv("HIBP_API_KEY")
 if not HIBP_API_KEY:
     raise RuntimeError("Chave de API não configurada corretamente!")
 
-
-def obter_vazamento_por_id(db: Session, vazamentoId: int):
-    vazamento = db.query(models.Vazamento).filter(vazamentoId == models.Vazamento.id).first()
-    if not vazamento:
-        raise HTTPException(status_code=404, detail="Vazamento não encontrado")
-    return vazamento
-
-
 HEADERS = {
     "HIBP-API-Key": HIBP_API_KEY,
     "User-Agent": "Osint Cyber",
 }
 
 API_URL_TEMPLATE = "https://haveibeenpwned.com/api/v3/breachedaccount/{email}?truncateResponse=false"
+
+
+def obter_vazamento_por_id(db: Session, vazamentoId: int):
+    vazamento = db.query(models.Vazamento).filter(vazamentoId == models.Vazamento.id).first()
+    if not vazamento:
+        raise HTTPException(status_code=404, detail="Vazamento não encontrado")
+    return vazamento
 
 
 async def obter_vazamentos_pelo_email_usuario_e_salva_no_db(db: Session, email: str) -> list[schemas.VazamentoResponse]:

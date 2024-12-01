@@ -42,6 +42,14 @@ def criar_usuario(usuario: UsuarioSchemas.CreateUserRequest, db: Session= Depend
 
     return  usuario
 
+@routerusuarios.patch(endpointUsuario + "{usuario_id}", response_model = UsuarioSchemas.UsuarioReponse)
+def atualizar_usuario(usuario_id: int, usuario: UsuarioSchemas.UpdateUserRequest, db: Session = Depends(get_db)):
+    try:
+        usuario_atualizado = UsuarioService.atualizar_usuario(db, usuario_id, usuario)
+        return usuario_atualizado
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
 
 
 
