@@ -35,3 +35,10 @@ class VazamentoResponse(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class NotificacaoRequest(BaseModel):
+    email_usuario: str
+    titulo_vazamento: str
+    data: str
+    descricao: str

@@ -5,6 +5,8 @@ from app.db.database import SessionLocal, engine
 from sqlalchemy.orm import Session
 from typing import List
 
+from app.services.VazamentoService import notificar_vazamento_usuario_por_email_demonstrativo
+
 models.Base.metadata.create_all(bind= engine)
 router = APIRouter()
 
@@ -37,6 +39,23 @@ def expor_vazamentos(skip: int = 0, limit: int = 100, db: Session = Depends(get_
         raise HTTPException(status_code=404, detail="Nenhum vazamento encontrado")
 
     return vazamentos
+
+
+@router.post(endpointVazamento + "notificar-vazamento-demonstrativo")
+async def notificar_vazamento_demonstrativo(notificacao: schemas.NotificacaoRequest):
+    """
+    Endpoint para notificar um usuário sobre um vazamento por e-mail.
+    """
+    try:
+        await notificar_vazamento_usuario_por_email_demonstrativo(
+            email_usuario=notificacao.email_usuario,
+            titulo_vazamento=notificacao.titulo_vazamento,
+            data=notificacao.data,
+            descricao=notificacao.descricao
+        )
+        return {"message": "E-mail enviado com sucesso!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro ao enviar e-mail: {str(e)}")
 
 
 

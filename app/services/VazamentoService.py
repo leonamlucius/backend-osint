@@ -1,5 +1,4 @@
 from typing import Optional
-
 import httpx
 import os
 from fastapi import HTTPException
@@ -8,6 +7,7 @@ from dotenv import load_dotenv
 from app.models.vazamentos import models, schemas
 from sqlalchemy.orm import Session
 from app.services import UsuarioService
+from app.services.EmailService import enviar_email
 
 load_dotenv()
 HIBP_API_KEY = os.getenv("HIBP_API_KEY")
@@ -132,5 +132,25 @@ def criar_vazamento_no_banco_de_dados(db: Session, vazamento_dados: dict, usuari
 
 def get_all_vazamentos(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Vazamento).offset(skip).limit(limit).all()
+
+async def notificar_vazamento_usuario_por_email_demonstrativo(email_usuario: str, titulo_vazamento: str, data: str, descricao: str) :
+    mensagem = (
+        f"Olá,\n\n"
+        f"Um novo vazamento foi identificado relacionado ao seu e-mail:\n\n"
+        f"**Título:** {titulo_vazamento}\n"
+        f"**Data:** {data}\n"
+        f"**Descrição:** {descricao}\n\n"
+        f"Recomendamos que altere suas senhas imediatamente e esteja atento a possíveis fraudes.\n\n"
+        f"Atenciosamente,\n"
+        f"Equipe de Segurança Start Cyber 2"
+    )
+    assunto = f"Novo vazamento detectado: {titulo_vazamento}"
+    await enviar_email(email_usuario, assunto, mensagem)
+
+
+
+
+
+
 
 
