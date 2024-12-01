@@ -10,9 +10,11 @@ from sqlalchemy.orm import Session
 from app.services import UsuarioService
 
 load_dotenv()
-HIBP_API_KEY = os.getenv("HIBP_API_KEY")
+HIBP_API_KEY = os.getenv("HIBP_API_KEY", "mock-api-key")
 
-if not HIBP_API_KEY:
+if HIBP_API_KEY == "mock-api-key":
+    print("Aviso: Usando chave de API simulada para testes.")
+elif not HIBP_API_KEY:
     raise RuntimeError("Chave de API não configurada corretamente!")
 
 

@@ -22,6 +22,9 @@ def get_db():
 
 @routerlogin.post(endpointLogin, response_model = UsuarioSchemas.UsuarioReponse)
 def logar_usuario(dadosUsuario: LoginSchemas.LoginRequest, db: Session= Depends(get_db)):
+    """
+    Valida as credenciais do usuário e retorna informações básicas sobre o usuário autenticado.
+    """
     return  LoginService.autenticar_usuario(db, dadosUsuario)
 
 
