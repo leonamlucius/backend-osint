@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime, date
-from typing import Optional
+from typing import Optional, List
+
 
 class VazamentoBase(BaseModel):
     nome: str
@@ -28,9 +29,12 @@ class VazamentoResponse(BaseModel):
     titulo: str
     dominio_url: str
     data_vazamento: Optional[date]
+    data_adicao: Optional[datetime]
     data_atualizacao: Optional[datetime]
+    pwn_count: int
     descricao: Optional[str] = None
     image_uri: Optional[str] = None
+    data_classes: List[str] = []  # Lista de strings
     usuario_id: int
 
     class Config:

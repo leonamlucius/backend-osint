@@ -35,7 +35,7 @@ def expor_vazamentos(skip: int = 0, limit: int = 100, db: Session = Depends(get_
     """
     vazamentos = VazamentoService.get_all_vazamentos(db, skip, limit) # Função do serviço para pegar os vazamentos
 
-    if not vazamentos: # Verificando se foram encontrados vazamentos
+    if not vazamentos:
         raise HTTPException(status_code=404, detail="Nenhum vazamento encontrado")
 
     return vazamentos
