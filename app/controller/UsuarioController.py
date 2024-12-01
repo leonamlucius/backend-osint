@@ -1,8 +1,11 @@
+
+
 from fastapi import APIRouter, HTTPException, Depends, status
 from app.services import UsuarioService
 from app.models.usuarios import UsuarioModel, UsuarioSchemas
 from app.db.database import SessionLocal, engine
 from sqlalchemy.orm import Session
+from typing import List
 
 UsuarioModel.Base.metadata.create_all(bind= engine)
 routerusuarios = APIRouter()

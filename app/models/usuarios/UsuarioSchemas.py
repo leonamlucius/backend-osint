@@ -11,3 +11,6 @@ class UsuarioReponse(BaseModel):
     id: int
     nome: str
     email: str
+    notificacoes_ativadas: bool
+
+

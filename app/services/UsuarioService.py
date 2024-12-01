@@ -36,3 +36,11 @@ def criar_usuario(db: Session, usuario: UsuarioSchemas.CreateUserRequest):
     db.commit()
     db.refresh(db_usuario)
     return db_usuario
+
+def obter_lista_de_usuarios_com_notifacao_ativadas(db: Session):
+
+    lista_de_usuarios_ativados = db.query(UsuarioModel.Usuario).filter(UsuarioModel.Usuario.notificacoes_ativadas == True).all()
+
+    return lista_de_usuarios_ativados
+
+
