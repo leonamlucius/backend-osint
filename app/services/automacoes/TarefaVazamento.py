@@ -18,7 +18,7 @@ logging.basicConfig(
 def iniciar_agendador():
     brt = pytz.timezone("America/Sao_Paulo")
     scheduler = AsyncIOScheduler()
-    trigger = CronTrigger(day_of_week="sun", hour=20, minute=20, timezone=brt)  # Todo domingo às 20:00
+    trigger = CronTrigger(day_of_week="mon", hour=11, minute=26, timezone=brt) # Todo domingo às 20:00
     scheduler.add_job(automatizar_notificacao_vazamentos, trigger)
     scheduler.start()
     logging.info("Agendador iniciado. Próxima execução programada para domingo às 20:00.")

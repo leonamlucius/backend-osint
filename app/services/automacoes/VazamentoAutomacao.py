@@ -1,5 +1,4 @@
 import logging
-
 from app.db.database import SessionLocal
 from app.services import UsuarioService, VazamentoService, EmailService
 
@@ -19,115 +18,53 @@ def get_db():
         db.close()
 
 
+def gerar_mensagem_html_multi(usuario_nome: str, vazamentos: list):
+    vazamentos_html = "".join([
+        f"""
+        <div class="vazamento-item">
+            <h3>{vazamento['titulo']}</h3>
+            <p><strong>Data:</strong> {vazamento['data']}</p>
+            <p><strong>Descrição:</strong> {vazamento['descricao']}</p>
+            <div class="image-container">
+                <img src="{vazamento['image_uri']}" alt="Imagem do Vazamento">
+            </div>
+        </div>
+        """
+        for vazamento in vazamentos
+    ])
 
-def gerar_mensagem_html(usuario_nome: str, vazamento_titulo: str, vazamento_data: str, vazamento_descricao: str,
-                        vazamento_imagem_url: str):
     return f"""
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Notificação de Vazamento</title>
+        <title>Notificação de Vazamentos</title>
         <style>
-            body {{
-                font-family: 'Arial', sans-serif;
-                background-color: #f4f4f9;
-                margin: 0;
-                padding: 0;
-            }}
-            .container {{
-                width: 100%;
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: #ffffff;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }}
-            .header {{
-                background-color: #4CAF50;
-                color: white;
-                padding: 15px;
-                border-radius: 8px 8px 0 0;
-                text-align: center;
-            }}
-            .content {{
-                margin: 20px 0;
-                font-size: 16px;
-                line-height: 1.6;
-            }}
-            .content a {{
-                color: #4CAF50;
-                text-decoration: none;
-            }}
-            .image-container {{
-                text-align: center;
-                margin: 20px 0;
-            }}
-            .image-container img {{
-                width: 80%;
-                max-width: 500px;
-                height: auto;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }}
-            .footer {{
-                text-align: center;
-                font-size: 14px;
-                color: #888888;
-                margin-top: 30px;
-            }}
-            .button {{
-                display: inline-block;
-                background-color: #4CAF50;
-                color: white;
-                padding: 10px 20px;
-                text-decoration: none;
-                border-radius: 5px;
-                margin-top: 20px;
-                text-align: center;
-            }}
-            .button:hover {{
-                background-color: #45a049;
-            }}
-            .note {{
-                font-size: 14px;
-                color: #888888;
-                margin-top: 10px;
-            }}
+            body {{ font-family: 'Arial', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; }}
+            .container {{ max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; }}
+            .header {{ background-color: #4CAF50; color: white; text-align: center; padding: 10px; }}
+            .vazamento-item {{ border-bottom: 1px solid #ddd; padding: 15px 0; }}
+            .vazamento-item img {{ max-width: 100%; border-radius: 8px; }}
+            .footer {{ text-align: center; color: #888888; margin-top: 20px; }}
         </style>
     </head>
     <body>
         <div class="container">
             <div class="header">
-                <h2>Alerta de Vazamento de Dados</h2>
+                <h2>Notificação de Vazamentos</h2>
             </div>
-            <div class="content">
-                <p>Olá {usuario_nome},</p>
-                <p>Um novo vazamento foi identificado relacionado ao seu e-mail:</p>
-                <p><strong>Título:</strong> {vazamento_titulo}</p>
-                <p><strong>Data:</strong> {vazamento_data}</p>
-                <p><strong>Descrição:</strong> {vazamento_descricao}</p>
-
-                <!-- Exibe a imagem do vazamento -->
-                <div class="image-container">
-                    <img src="{vazamento_imagem_url}" alt="Imagem do Vazamento">
-                </div>
-
-                <p>Recomendamos que altere suas senhas imediatamente e esteja atento a possíveis fraudes.</p>
-                <a href="#" class="button">Alterar Senha</a>
-            </div>
+            <p>Olá {usuario_nome},</p>
+            <p>Identificamos os seguintes vazamentos relacionados ao seu e-mail:</p>
+            {vazamentos_html}
             <div class="footer">
                 <p>Atenciosamente,</p>
-                <p><strong>Equipe de Segurança Start Cyber 2</strong></p>
-                <p class="note">Se você não reconhece esse e-mail, por favor, ignore ou entre em contato conosco.</p>
+                <p><strong>Equipe de Segurança Start Cyber</strong></p>
             </div>
         </div>
     </body>
     </html>
     """
-
 
 
 async def automatizar_notificacao_vazamentos():
@@ -142,20 +79,24 @@ async def automatizar_notificacao_vazamentos():
 
         for usuario in usuarios_com_notificacoes:
             vazamentos = await VazamentoService.obter_vazamentos_pelo_email_usuario_e_salva_no_db_sem_verificacao_local(
-                db, usuario.email)
+                db, usuario.email
+            )
 
             if vazamentos:
-                for vazamento in vazamentos:
-                    vazamento_data = vazamento.data_vazamento
+                vazamentos_formatados = [
+                    {
+                        "titulo": vazamento.titulo,
+                        "data": vazamento.data_vazamento.strftime('%d/%m/%Y'),
+                        "descricao": vazamento.descricao,
+                        "image_uri": vazamento.image_uri
+                    }
+                    for vazamento in vazamentos
+                ]
 
-                    data_formatada = vazamento_data.strftime('%d/%m/%Y')
-
-                    mensagem_html = gerar_mensagem_html(
-                        usuario.nome, vazamento.titulo, data_formatada, vazamento.descricao, vazamento.image_uri
-                    )
-                    assunto = f"Novo vazamento detectado: {vazamento.titulo}"
-                    await EmailService.enviar_email(usuario.email, assunto, mensagem_html)
-                    logging.info(f"E-mail enviado para {usuario.email} sobre o vazamento: {vazamento.titulo}")
+                mensagem_html = gerar_mensagem_html_multi(usuario.nome, vazamentos_formatados)
+                assunto = f"Notificação de Vazamentos: {len(vazamentos)} novos"
+                await EmailService.enviar_email(usuario.email, assunto, mensagem_html)
+                logging.info(f"E-mail enviado para {usuario.email} com {len(vazamentos)} vazamentos.")
             else:
                 logging.info(f"Nenhum novo vazamento encontrado para o usuário: {usuario.email}")
 
