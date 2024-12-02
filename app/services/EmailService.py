@@ -7,8 +7,7 @@ import os
 from fastapi import HTTPException
 
 load_dotenv()
-logging.basicConfig(level=logging.ERROR, filename='errorLogEmail.log',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587

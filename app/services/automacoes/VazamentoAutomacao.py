@@ -2,12 +2,6 @@ import logging
 from app.db.database import SessionLocal
 from app.services import UsuarioService, VazamentoService, EmailService
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    filename="scheduler.log",
-    filemode="a",
-)
 
 
 def get_db():
