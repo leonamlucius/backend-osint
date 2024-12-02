@@ -1,4 +1,3 @@
-# Configuração de logging
 import logging
 
 from app.db.database import SessionLocal
@@ -11,7 +10,7 @@ logging.basicConfig(
     filemode="a",
 )
 
-# Função para gerenciar a sessão do banco de dados
+
 def get_db():
     db = SessionLocal()
     try:
@@ -20,7 +19,7 @@ def get_db():
         db.close()
 
 
-# Função para gerar o HTML do e-mail com imagem
+
 def gerar_mensagem_html(usuario_nome: str, vazamento_titulo: str, vazamento_data: str, vazamento_descricao: str,
                         vazamento_imagem_url: str):
     return f"""
@@ -130,7 +129,7 @@ def gerar_mensagem_html(usuario_nome: str, vazamento_titulo: str, vazamento_data
     """
 
 
-# Função principal da automação
+
 async def automatizar_notificacao_vazamentos():
     logging.info("Iniciando a tarefa de notificação de vazamentos.")
     try:
@@ -154,11 +153,7 @@ async def automatizar_notificacao_vazamentos():
                     mensagem_html = gerar_mensagem_html(
                         usuario.nome, vazamento.titulo, data_formatada, vazamento.descricao, vazamento.image_uri
                     )
-
-                    # Prepara o assunto
                     assunto = f"Novo vazamento detectado: {vazamento.titulo}"
-
-                    # Envia o e-mail com o HTML
                     await EmailService.enviar_email(usuario.email, assunto, mensagem_html)
                     logging.info(f"E-mail enviado para {usuario.email} sobre o vazamento: {vazamento.titulo}")
             else:

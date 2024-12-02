@@ -6,7 +6,7 @@ from apscheduler.triggers.cron import CronTrigger
 
 from app.services.automacoes.VazamentoAutomacao import automatizar_notificacao_vazamentos
 
-# Configuração de logging
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -14,7 +14,7 @@ logging.basicConfig(
     filemode="a",
 )
 
-# Função para iniciar o agendador
+
 def iniciar_agendador():
     brt = pytz.timezone("America/Sao_Paulo")
     scheduler = AsyncIOScheduler()
