@@ -253,7 +253,6 @@ async def notificar_vazamento_usuario_por_email_demonstrativo(email_usuario: str
                 </div>
 
                 <p>Recomendamos que altere suas senhas imediatamente e esteja atento a possíveis fraudes.</p>
-                <a href="#" class="button">Alterar Senha</a>
             </div>
             <div class="footer">
                 <p>Atenciosamente,</p>

@@ -13,6 +13,7 @@ class UsuarioReponse(BaseModel):
     id: int
     nome: str
     email: str
+    avatar: str
     notificacoes_ativadas: bool
 
     class Config:
