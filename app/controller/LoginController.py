@@ -4,6 +4,7 @@ from app.models.usuarios import UsuarioModel, UsuarioSchemas
 from app.models.login import LoginSchemas
 from app.db.database import SessionLocal, engine
 from sqlalchemy.orm import Session
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 UsuarioModel.Base.metadata.create_all(bind= engine)
 routerlogin = APIRouter()
@@ -17,7 +18,6 @@ def get_db():
         yield db
     finally:
         db.close()
-
 
 
 @routerlogin.post(endpointLogin, response_model = UsuarioSchemas.UsuarioReponse)

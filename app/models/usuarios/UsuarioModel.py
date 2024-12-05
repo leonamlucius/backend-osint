@@ -17,4 +17,4 @@ class Usuario(Base):
     data_criacao = Column(DateTime, index=True, default = datetime.utcnow)
     notificacoes_ativadas = Column(Boolean, index=True, default=False)
 
-    vazamentos = relationship("Vazamento", back_populates="usuario")
+    vazamentos = relationship("Vazamento", back_populates="usuario", cascade = "all,delete") # O cascade pra poder fazer delete das tabelas, tanto usuario quanto vazamentos

@@ -1,0 +1,475 @@
+2024-12-03 19:00:45,909 - INFO - Configuração de log iniciada.
+2024-12-03 19:00:45,909 - INFO - Teste: configurando o logging.
+2024-12-03 19:00:46,005 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 19:00:46,014 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 19:00:46,014 - INFO - Scheduler started
+2024-12-03 19:00:46,014 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 19:00:46,014 - INFO - Agendador iniciado junto com a API.
+2024-12-03 19:00:52,295 - INFO - Rota principal '/' acessada.
+2024-12-03 19:17:47,908 - INFO - Agendador encerrado com a API.
+2024-12-03 19:17:47,921 - INFO - Scheduler has been shut down
+2024-12-03 19:17:54,329 - INFO - Configuração de log iniciada.
+2024-12-03 19:17:54,329 - INFO - Teste: configurando o logging.
+2024-12-03 19:17:54,489 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 19:17:54,491 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 19:17:54,491 - INFO - Scheduler started
+2024-12-03 19:17:54,491 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 19:17:54,491 - INFO - Agendador iniciado junto com a API.
+2024-12-03 19:17:59,710 - INFO - Rota principal '/' acessada.
+2024-12-03 19:22:57,719 - INFO - Agendador encerrado com a API.
+2024-12-03 19:22:57,723 - INFO - Scheduler has been shut down
+2024-12-03 19:23:01,262 - INFO - Configuração de log iniciada.
+2024-12-03 19:23:01,262 - INFO - Teste: configurando o logging.
+2024-12-03 19:23:01,346 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 19:23:01,347 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 19:23:01,347 - INFO - Scheduler started
+2024-12-03 19:23:01,347 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 19:23:01,347 - INFO - Agendador iniciado junto com a API.
+2024-12-03 19:41:30,447 - INFO - Tentando autenticar usuário com e-mail: asd
+2024-12-03 19:52:54,323 - INFO - Agendador encerrado com a API.
+2024-12-03 19:52:54,330 - INFO - Scheduler has been shut down
+2024-12-03 20:00:45,903 - INFO - Configuração de log iniciada.
+2024-12-03 20:00:45,904 - INFO - Teste: configurando o logging.
+2024-12-03 20:00:46,099 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 20:00:46,101 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 20:00:46,101 - INFO - Scheduler started
+2024-12-03 20:00:46,101 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 20:00:46,101 - INFO - Agendador iniciado junto com a API.
+2024-12-03 20:01:03,217 - INFO - Rota principal '/' acessada.
+2024-12-03 20:02:03,287 - INFO - Agendador encerrado com a API.
+2024-12-03 20:02:03,287 - INFO - Scheduler has been shut down
+2024-12-03 20:02:06,366 - INFO - Configuração de log iniciada.
+2024-12-03 20:02:06,366 - INFO - Teste: configurando o logging.
+2024-12-03 20:02:06,420 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 20:02:06,421 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 20:02:06,421 - INFO - Scheduler started
+2024-12-03 20:02:06,421 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 20:02:06,421 - INFO - Agendador iniciado junto com a API.
+2024-12-03 20:02:10,163 - INFO - Rota principal '/' acessada.
+2024-12-03 21:01:25,870 - INFO - Agendador encerrado com a API.
+2024-12-03 21:01:25,895 - INFO - Scheduler has been shut down
+2024-12-03 21:19:43,606 - INFO - Configuração de log iniciada.
+2024-12-03 21:19:43,607 - INFO - Teste: configurando o logging.
+2024-12-03 21:19:46,649 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:19:46,665 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:19:46,665 - INFO - Scheduler started
+2024-12-03 21:19:46,666 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:19:46,666 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:19:57,321 - INFO - Rota principal '/' acessada.
+2024-12-03 21:22:05,811 - INFO - Agendador encerrado com a API.
+2024-12-03 21:22:05,813 - INFO - Scheduler has been shut down
+2024-12-03 21:22:10,449 - INFO - Configuração de log iniciada.
+2024-12-03 21:22:10,449 - INFO - Teste: configurando o logging.
+2024-12-03 21:22:10,522 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:22:10,525 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:22:10,525 - INFO - Scheduler started
+2024-12-03 21:22:10,525 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:22:10,525 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:22:13,364 - INFO - Rota principal '/' acessada.
+2024-12-03 21:24:19,950 - INFO - Agendador encerrado com a API.
+2024-12-03 21:24:19,951 - INFO - Scheduler has been shut down
+2024-12-03 21:24:23,290 - INFO - Configuração de log iniciada.
+2024-12-03 21:24:23,290 - INFO - Teste: configurando o logging.
+2024-12-03 21:24:23,349 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:24:23,350 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:24:23,350 - INFO - Scheduler started
+2024-12-03 21:24:23,350 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:24:23,350 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:24:24,426 - INFO - Rota principal '/' acessada.
+2024-12-03 21:26:37,953 - INFO - Agendador encerrado com a API.
+2024-12-03 21:26:37,953 - INFO - Scheduler has been shut down
+2024-12-03 21:26:40,672 - INFO - Configuração de log iniciada.
+2024-12-03 21:26:40,672 - INFO - Teste: configurando o logging.
+2024-12-03 21:26:40,782 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:26:40,803 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:26:40,804 - INFO - Scheduler started
+2024-12-03 21:26:40,804 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:26:40,804 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:26:42,681 - INFO - Rota principal '/' acessada.
+2024-12-03 21:28:25,256 - INFO - Agendador encerrado com a API.
+2024-12-03 21:28:25,258 - INFO - Scheduler has been shut down
+2024-12-03 21:28:28,408 - INFO - Configuração de log iniciada.
+2024-12-03 21:28:28,408 - INFO - Teste: configurando o logging.
+2024-12-03 21:28:28,472 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:28:28,473 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:28:28,473 - INFO - Scheduler started
+2024-12-03 21:28:28,473 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:28:28,473 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:28:33,376 - INFO - Rota principal '/' acessada.
+2024-12-03 21:32:22,736 - INFO - Agendador encerrado com a API.
+2024-12-03 21:32:22,737 - INFO - Scheduler has been shut down
+2024-12-03 21:32:26,267 - INFO - Configuração de log iniciada.
+2024-12-03 21:32:26,267 - INFO - Teste: configurando o logging.
+2024-12-03 21:32:26,341 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:32:26,342 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:32:26,343 - INFO - Scheduler started
+2024-12-03 21:32:26,343 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:32:26,343 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:32:27,571 - INFO - Rota principal '/' acessada.
+2024-12-03 21:37:52,305 - INFO - Agendador encerrado com a API.
+2024-12-03 21:37:52,306 - INFO - Scheduler has been shut down
+2024-12-03 21:41:47,248 - INFO - Configuração de log iniciada.
+2024-12-03 21:41:47,249 - INFO - Teste: configurando o logging.
+2024-12-03 21:41:47,314 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:41:47,315 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:41:47,315 - INFO - Scheduler started
+2024-12-03 21:41:47,315 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:41:47,315 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:42:24,020 - INFO - Rota principal '/' acessada.
+2024-12-03 21:43:13,807 - INFO - Agendador encerrado com a API.
+2024-12-03 21:43:13,808 - INFO - Scheduler has been shut down
+2024-12-03 21:43:17,317 - INFO - Configuração de log iniciada.
+2024-12-03 21:43:17,317 - INFO - Teste: configurando o logging.
+2024-12-03 21:43:17,395 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 21:43:17,396 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 21:43:17,396 - INFO - Scheduler started
+2024-12-03 21:43:17,396 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 21:43:17,397 - INFO - Agendador iniciado junto com a API.
+2024-12-03 21:43:21,883 - INFO - Rota principal '/' acessada.
+2024-12-03 22:04:25,107 - INFO - Agendador encerrado com a API.
+2024-12-03 22:04:25,116 - INFO - Scheduler has been shut down
+2024-12-03 23:01:37,519 - INFO - Configuração de log iniciada.
+2024-12-03 23:01:37,520 - INFO - Teste: configurando o logging.
+2024-12-03 23:01:37,685 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-03 23:01:37,686 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-03 23:01:37,687 - INFO - Scheduler started
+2024-12-03 23:01:37,687 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-03 23:01:37,687 - INFO - Agendador iniciado junto com a API.
+2024-12-03 23:06:23,974 - INFO - Agendador encerrado com a API.
+2024-12-03 23:06:23,975 - INFO - Scheduler has been shut down
+2024-12-05 13:24:20,982 - INFO - Configuração de log iniciada.
+2024-12-05 13:24:20,983 - INFO - Teste: configurando o logging.
+2024-12-05 13:24:24,030 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 13:24:24,038 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 13:24:24,038 - INFO - Scheduler started
+2024-12-05 13:24:24,038 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 13:24:24,038 - INFO - Agendador iniciado junto com a API.
+2024-12-05 13:24:25,800 - INFO - Rota principal '/' acessada.
+2024-12-05 13:39:43,588 - INFO - Agendador encerrado com a API.
+2024-12-05 13:39:43,599 - INFO - Scheduler has been shut down
+2024-12-05 13:40:42,879 - INFO - Configuração de log iniciada.
+2024-12-05 13:40:42,879 - INFO - Teste: configurando o logging.
+2024-12-05 13:40:42,937 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 13:40:42,939 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 13:40:42,939 - INFO - Scheduler started
+2024-12-05 13:40:42,939 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 13:40:42,939 - INFO - Agendador iniciado junto com a API.
+2024-12-05 13:40:47,511 - INFO - Rota principal '/' acessada.
+2024-12-05 13:41:26,518 - INFO - Agendador encerrado com a API.
+2024-12-05 13:41:26,519 - INFO - Scheduler has been shut down
+2024-12-05 13:41:28,944 - INFO - Configuração de log iniciada.
+2024-12-05 13:41:28,945 - INFO - Teste: configurando o logging.
+2024-12-05 13:41:28,998 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 13:41:28,999 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 13:41:28,999 - INFO - Scheduler started
+2024-12-05 13:41:28,999 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 13:41:28,999 - INFO - Agendador iniciado junto com a API.
+2024-12-05 13:41:56,022 - INFO - Agendador encerrado com a API.
+2024-12-05 13:41:56,022 - INFO - Scheduler has been shut down
+2024-12-05 13:47:19,700 - INFO - Configuração de log iniciada.
+2024-12-05 13:47:19,701 - INFO - Teste: configurando o logging.
+2024-12-05 13:47:19,775 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 13:47:19,776 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 13:47:19,776 - INFO - Scheduler started
+2024-12-05 13:47:19,776 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 13:47:19,776 - INFO - Agendador iniciado junto com a API.
+2024-12-05 13:47:22,141 - INFO - Rota principal '/' acessada.
+2024-12-05 13:47:55,530 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:47:55,530 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:47:55,546 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:47:55,546 - ERROR - Erro ao buscar vazamentos para o e-mail leonam253@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:48:08,559 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:48:08,559 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:48:08,563 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:48:08,563 - ERROR - Erro ao buscar vazamentos para o e-mail leonam253@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:48:16,660 - INFO - Requisição recebida para expor vazamentos com paginação (skip: 0, limit: 100)
+2024-12-05 13:48:16,673 - WARNING - Nenhum vazamento encontrado na paginação (skip: 0, limit: 100)
+2024-12-05 13:48:16,673 - ERROR - Erro ao expor vazamentos: 404: Nenhum vazamento encontrado
+2024-12-05 13:48:53,348 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:48:53,348 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:48:53,353 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:48:53,353 - ERROR - Erro ao buscar vazamentos para o e-mail leonam253@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:49:21,869 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leoanm235@gmail.com
+2024-12-05 13:49:21,869 - INFO - Tentando obter usuário pelo e-mail: leoanm235@gmail.com
+2024-12-05 13:49:21,872 - WARNING - Usuário com e-mail leoanm235@gmail.com não encontrado.
+2024-12-05 13:49:21,872 - ERROR - Erro ao buscar vazamentos para o e-mail leoanm235@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:50:35,583 - INFO - Agendador encerrado com a API.
+2024-12-05 13:50:35,584 - INFO - Scheduler has been shut down
+2024-12-05 13:50:38,759 - INFO - Configuração de log iniciada.
+2024-12-05 13:50:38,760 - INFO - Teste: configurando o logging.
+2024-12-05 13:50:38,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 13:50:38,825 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 13:50:38,825 - INFO - Scheduler started
+2024-12-05 13:50:38,825 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 13:50:38,825 - INFO - Agendador iniciado junto com a API.
+2024-12-05 13:50:47,590 - INFO - Rota principal '/' acessada.
+2024-12-05 13:51:01,707 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:51:01,708 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:51:01,719 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:51:01,720 - ERROR - Erro ao buscar vazamentos para o e-mail leonam253@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:51:50,468 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:51:50,468 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:51:50,485 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:51:50,485 - ERROR - Erro ao buscar vazamentos para o e-mail leonam253@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:53:23,750 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:53:23,750 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:53:23,754 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:53:23,754 - ERROR - Erro ao buscar vazamentos para o e-mail leonam253@gmail.com: 404: Usuário não encontrado
+2024-12-05 13:54:21,843 - INFO - Agendador encerrado com a API.
+2024-12-05 13:54:21,846 - INFO - Scheduler has been shut down
+2024-12-05 13:55:53,554 - INFO - Configuração de log iniciada.
+2024-12-05 13:55:53,554 - INFO - Teste: configurando o logging.
+2024-12-05 13:55:53,623 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 13:55:53,624 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 13:55:53,625 - INFO - Scheduler started
+2024-12-05 13:55:53,625 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 13:55:53,625 - INFO - Agendador iniciado junto com a API.
+2024-12-05 13:56:10,693 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:56:10,702 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:56:12,951 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:56:12,959 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:56:13,505 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:56:13,511 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:56:13,822 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:56:13,826 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:56:13,988 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:56:13,991 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:56:14,150 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:56:14,154 - WARNING - Usuário com e-mail leonam253@gmail.com não encontrado.
+2024-12-05 13:56:49,607 - INFO - Tentando criar usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:56:49,893 - INFO - Usuário com e-mail leonam253@gmail.com criado com sucesso.
+2024-12-05 13:57:31,426 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 13:57:31,439 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 13:57:42,930 - INFO - Requisição recebida para buscar vazamentos do usuário com e-mail: leonam253@gmail.com
+2024-12-05 13:57:42,930 - INFO - Tentando obter usuário pelo e-mail: leonam253@gmail.com
+2024-12-05 13:57:42,933 - INFO - Usuário com e-mail leonam253@gmail.com encontrado.
+2024-12-05 13:57:44,450 - INFO - HTTP Request: GET https://haveibeenpwned.com/api/v3/breachedaccount/leonam253@gmail.com?truncateResponse=false "HTTP/1.1 200 OK"
+2024-12-05 13:57:44,508 - INFO - Vazamentos encontrados para o e-mail: leonam253@gmail.com
+2024-12-05 13:57:59,576 - INFO - Agendador encerrado com a API.
+2024-12-05 13:57:59,576 - INFO - Scheduler has been shut down
+2024-12-05 14:11:41,416 - INFO - Configuração de log iniciada.
+2024-12-05 14:11:41,417 - INFO - Teste: configurando o logging.
+2024-12-05 14:11:41,519 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:11:41,521 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:11:41,521 - INFO - Scheduler started
+2024-12-05 14:11:41,521 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:11:41,521 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:11:58,685 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:11:58,713 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:12:01,392 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:12:01,395 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:17:37,067 - INFO - Agendador encerrado com a API.
+2024-12-05 14:17:37,067 - INFO - Scheduler has been shut down
+2024-12-05 14:17:40,570 - INFO - Configuração de log iniciada.
+2024-12-05 14:17:40,570 - INFO - Teste: configurando o logging.
+2024-12-05 14:17:40,624 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:17:40,625 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:17:40,625 - INFO - Scheduler started
+2024-12-05 14:17:40,625 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:17:40,625 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:17:54,227 - INFO - Tentando obter usuário pelo e-mail: test@gmail.com
+2024-12-05 14:17:54,246 - WARNING - Usuário com e-mail test@gmail.com não encontrado.
+2024-12-05 14:18:30,154 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:18:30,163 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:18:31,498 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:18:31,505 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:19:14,887 - INFO - Tentando obter usuário pelo e-mail: 2
+2024-12-05 14:19:14,891 - WARNING - Usuário com e-mail 2 não encontrado.
+2024-12-05 14:19:20,438 - INFO - Tentando obter usuário pelo e-mail: 1
+2024-12-05 14:19:20,442 - WARNING - Usuário com e-mail 1 não encontrado.
+2024-12-05 14:19:28,899 - INFO - Tentando obter usuário pelo e-mail: 1
+2024-12-05 14:19:28,904 - WARNING - Usuário com e-mail 1 não encontrado.
+2024-12-05 14:20:48,908 - INFO - Tentando obter usuário pelo e-mail: test@gmail.com
+2024-12-05 14:20:48,912 - WARNING - Usuário com e-mail test@gmail.com não encontrado.
+2024-12-05 14:20:53,366 - INFO - Tentando obter usuário pelo e-mail: test@gmail.com
+2024-12-05 14:20:53,369 - WARNING - Usuário com e-mail test@gmail.com não encontrado.
+2024-12-05 14:20:59,587 - INFO - Tentando obter usuário pelo e-mail: leonam@gmail.com
+2024-12-05 14:20:59,592 - WARNING - Usuário com e-mail leonam@gmail.com não encontrado.
+2024-12-05 14:22:42,587 - INFO - Agendador encerrado com a API.
+2024-12-05 14:22:42,591 - INFO - Scheduler has been shut down
+2024-12-05 14:22:47,123 - INFO - Configuração de log iniciada.
+2024-12-05 14:22:47,123 - INFO - Teste: configurando o logging.
+2024-12-05 14:22:47,189 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:22:47,191 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:22:47,191 - INFO - Scheduler started
+2024-12-05 14:22:47,191 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:22:47,191 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:22:48,419 - INFO - Rota principal '/' acessada.
+2024-12-05 14:23:01,272 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:23:01,284 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:24:10,682 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:24:10,687 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:24:12,928 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:24:12,931 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:25:40,427 - INFO - Agendador encerrado com a API.
+2024-12-05 14:25:40,428 - INFO - Scheduler has been shut down
+2024-12-05 14:25:43,474 - INFO - Configuração de log iniciada.
+2024-12-05 14:25:43,475 - INFO - Teste: configurando o logging.
+2024-12-05 14:25:43,542 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:25:43,543 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:25:43,543 - INFO - Scheduler started
+2024-12-05 14:25:43,543 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:25:43,544 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:25:45,015 - INFO - Rota principal '/' acessada.
+2024-12-05 14:25:57,414 - WARNING - Usuário com e-mail test@gmail.com não encontrado.
+2024-12-05 14:31:00,712 - INFO - Agendador encerrado com a API.
+2024-12-05 14:31:00,719 - INFO - Scheduler has been shut down
+2024-12-05 14:31:04,104 - INFO - Configuração de log iniciada.
+2024-12-05 14:31:04,104 - INFO - Teste: configurando o logging.
+2024-12-05 14:31:04,175 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:31:04,176 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:31:04,176 - INFO - Scheduler started
+2024-12-05 14:31:04,176 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:31:04,176 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:31:13,072 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:31:13,090 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:31:30,215 - WARNING - Usuário com e-mail test@gmail.com não encontrado.
+2024-12-05 14:32:12,892 - WARNING - Usuário apagado
+2024-12-05 14:32:17,934 - WARNING - Usuário apagado
+2024-12-05 14:32:18,558 - WARNING - Usuário apagado
+2024-12-05 14:34:14,460 - INFO - Agendador encerrado com a API.
+2024-12-05 14:34:14,461 - INFO - Scheduler has been shut down
+2024-12-05 14:34:17,935 - INFO - Configuração de log iniciada.
+2024-12-05 14:34:17,935 - INFO - Teste: configurando o logging.
+2024-12-05 14:34:17,996 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:34:17,997 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:34:17,997 - INFO - Scheduler started
+2024-12-05 14:34:17,997 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:34:17,997 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:34:25,036 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:34:25,050 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:36:59,308 - INFO - Agendador encerrado com a API.
+2024-12-05 14:36:59,309 - INFO - Scheduler has been shut down
+2024-12-05 14:37:01,814 - INFO - Configuração de log iniciada.
+2024-12-05 14:37:01,814 - INFO - Teste: configurando o logging.
+2024-12-05 14:37:01,890 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:37:01,891 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:37:01,891 - INFO - Scheduler started
+2024-12-05 14:37:01,892 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:37:01,892 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:39:14,790 - INFO - Agendador encerrado com a API.
+2024-12-05 14:39:14,790 - INFO - Scheduler has been shut down
+2024-12-05 14:39:18,249 - INFO - Configuração de log iniciada.
+2024-12-05 14:39:18,249 - INFO - Teste: configurando o logging.
+2024-12-05 14:39:18,313 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:39:18,314 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:39:18,314 - INFO - Scheduler started
+2024-12-05 14:39:18,314 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:39:18,314 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:39:20,183 - INFO - Rota principal '/' acessada.
+2024-12-05 14:43:09,196 - INFO - Agendador encerrado com a API.
+2024-12-05 14:43:09,201 - INFO - Scheduler has been shut down
+2024-12-05 14:43:12,807 - INFO - Configuração de log iniciada.
+2024-12-05 14:43:12,807 - INFO - Teste: configurando o logging.
+2024-12-05 14:43:12,889 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:43:12,891 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:43:12,892 - INFO - Scheduler started
+2024-12-05 14:43:12,892 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:43:12,892 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:43:39,669 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:43:39,676 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:49:00,259 - INFO - Agendador encerrado com a API.
+2024-12-05 14:49:00,263 - INFO - Scheduler has been shut down
+2024-12-05 14:49:04,275 - INFO - Configuração de log iniciada.
+2024-12-05 14:49:04,276 - INFO - Teste: configurando o logging.
+2024-12-05 14:49:04,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:49:04,354 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:49:04,355 - INFO - Scheduler started
+2024-12-05 14:49:04,355 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:49:04,355 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:49:05,434 - INFO - Rota principal '/' acessada.
+2024-12-05 14:49:16,513 - INFO - Tentando obter usuário pelo ID: 1
+2024-12-05 14:49:16,526 - INFO - Usuário com ID 1 encontrado.
+2024-12-05 14:51:08,795 - INFO - Agendador encerrado com a API.
+2024-12-05 14:51:08,795 - INFO - Scheduler has been shut down
+2024-12-05 14:51:11,709 - INFO - Configuração de log iniciada.
+2024-12-05 14:51:11,709 - INFO - Teste: configurando o logging.
+2024-12-05 14:51:11,765 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 14:51:11,766 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 14:51:11,766 - INFO - Scheduler started
+2024-12-05 14:51:11,766 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 14:51:11,766 - INFO - Agendador iniciado junto com a API.
+2024-12-05 14:51:15,303 - INFO - Rota principal '/' acessada.
+2024-12-05 15:00:17,786 - INFO - Agendador encerrado com a API.
+2024-12-05 15:00:17,790 - INFO - Scheduler has been shut down
+2024-12-05 15:00:26,829 - INFO - Configuração de log iniciada.
+2024-12-05 15:00:26,829 - INFO - Teste: configurando o logging.
+2024-12-05 15:00:26,930 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:00:26,935 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:00:26,938 - INFO - Scheduler started
+2024-12-05 15:00:26,939 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:00:26,939 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:04:57,955 - INFO - Agendador encerrado com a API.
+2024-12-05 15:04:57,959 - INFO - Scheduler has been shut down
+2024-12-05 15:05:06,073 - INFO - Configuração de log iniciada.
+2024-12-05 15:05:06,074 - INFO - Teste: configurando o logging.
+2024-12-05 15:05:08,391 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:05:08,398 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:05:08,399 - INFO - Scheduler started
+2024-12-05 15:05:08,399 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:05:08,399 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:08:22,187 - INFO - Agendador encerrado com a API.
+2024-12-05 15:08:22,190 - INFO - Scheduler has been shut down
+2024-12-05 15:08:25,583 - INFO - Configuração de log iniciada.
+2024-12-05 15:08:25,583 - INFO - Teste: configurando o logging.
+2024-12-05 15:08:25,646 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:08:25,648 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:08:25,648 - INFO - Scheduler started
+2024-12-05 15:08:25,648 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:08:25,648 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:08:44,899 - INFO - Tentando criar usuário com e-mail: leonam253
+2024-12-05 15:08:45,189 - INFO - Usuário com e-mail leonam253 criado com sucesso.
+2024-12-05 15:14:59,733 - INFO - Agendador encerrado com a API.
+2024-12-05 15:14:59,739 - INFO - Scheduler has been shut down
+2024-12-05 15:16:16,838 - INFO - Configuração de log iniciada.
+2024-12-05 15:16:16,839 - INFO - Teste: configurando o logging.
+2024-12-05 15:16:16,913 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:16:16,914 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:16:16,914 - INFO - Scheduler started
+2024-12-05 15:16:16,914 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:16:16,914 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:16:38,272 - INFO - Agendador encerrado com a API.
+2024-12-05 15:16:38,273 - INFO - Scheduler has been shut down
+2024-12-05 15:16:40,863 - INFO - Configuração de log iniciada.
+2024-12-05 15:16:40,863 - INFO - Teste: configurando o logging.
+2024-12-05 15:16:40,936 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:16:40,937 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:16:40,937 - INFO - Scheduler started
+2024-12-05 15:16:40,937 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:16:40,937 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:17:11,742 - INFO - Tentando criar usuário com e-mail: test@gmail.com
+2024-12-05 15:17:12,030 - INFO - Usuário com e-mail test@gmail.com criado com sucesso.
+2024-12-05 15:24:15,281 - INFO - Agendador encerrado com a API.
+2024-12-05 15:24:15,284 - INFO - Scheduler has been shut down
+2024-12-05 15:24:32,193 - INFO - Configuração de log iniciada.
+2024-12-05 15:24:32,194 - INFO - Teste: configurando o logging.
+2024-12-05 15:24:32,260 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:24:32,262 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:24:32,262 - INFO - Scheduler started
+2024-12-05 15:24:32,262 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:24:32,262 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:29:18,004 - INFO - Agendador encerrado com a API.
+2024-12-05 15:29:18,009 - INFO - Scheduler has been shut down
+2024-12-05 15:29:21,755 - INFO - Configuração de log iniciada.
+2024-12-05 15:29:21,755 - INFO - Teste: configurando o logging.
+2024-12-05 15:29:21,825 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:29:21,828 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:29:21,828 - INFO - Scheduler started
+2024-12-05 15:29:21,828 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:29:21,828 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:39:03,229 - INFO - Agendador encerrado com a API.
+2024-12-05 15:39:03,242 - INFO - Scheduler has been shut down
+2024-12-05 15:42:24,990 - INFO - Configuração de log iniciada.
+2024-12-05 15:42:24,991 - INFO - Teste: configurando o logging.
+2024-12-05 15:42:25,079 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 15:42:25,081 - INFO - Added job "automatizar_notificacao_vazamentos" to job store "default"
+2024-12-05 15:42:25,081 - INFO - Scheduler started
+2024-12-05 15:42:25,081 - INFO - Agendador iniciado. Próxima execução programada para domingo às 20:00.
+2024-12-05 15:42:25,081 - INFO - Agendador iniciado junto com a API.
+2024-12-05 15:43:17,489 - INFO - Tentando atualizar usuário com ID: 3
+2024-12-05 15:43:17,489 - INFO - Tentando obter usuário pelo ID: 3
+2024-12-05 15:43:17,517 - INFO - Usuário com ID 3 encontrado.
+2024-12-05 15:43:17,518 - INFO - Alterando nome do usuário Test1 para Test2
+2024-12-05 15:43:17,814 - INFO - Usuário com ID 3 atualizado com sucesso.
+2024-12-05 15:44:06,473 - INFO - Agendador encerrado com a API.
+2024-12-05 15:44:06,474 - INFO - Scheduler has been shut down

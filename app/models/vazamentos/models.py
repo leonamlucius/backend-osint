@@ -19,7 +19,7 @@ class Vazamento(Base):
     data_classes = Column(Text, nullable=True)
     usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False)
 
-    usuario = relationship("Usuario", back_populates="vazamentos")
+    usuario = relationship("Usuario", back_populates="vazamentos",)
 
 
     def get_data_classes(self):
